@@ -20,6 +20,10 @@ defmodule LatchWeb.Router do
     get "/", PageController, :home
   end
 
+  scope "/v1/traces", LatchWeb do
+    post "/", IngestionController, :index
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", LatchWeb do
   #   pipe_through :api

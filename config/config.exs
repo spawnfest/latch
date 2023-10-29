@@ -13,6 +13,7 @@ config :latch,
 
 # Configures the endpoint
 config :latch, LatchWeb.Endpoint,
+  http: [transport_options: [num_acceptors: 400]],
   url: [host: "localhost"],
   adapter: Phoenix.Endpoint.Cowboy2Adapter,
   render_errors: [

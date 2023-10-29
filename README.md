@@ -8,4 +8,10 @@ To start your Phoenix server:
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 
+## Development
+
+Generate Protox protobuf messages:
+```
+MIX_ENV=prod mix protox.generate --keep-unknown-fields=false --generate-defs-funs=false --output-path=trace.ex --include-path=/Users/hans.krutzer/Development/opensource/opentelemetry-proto /Users/hans.krutzer/Development/opensource/opentelemetry-proto/opentelemetry/proto/collector/trace/v1/trace_service.protobuf
+```
 
