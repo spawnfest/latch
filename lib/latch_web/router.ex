@@ -17,7 +17,7 @@ defmodule LatchWeb.Router do
   scope "/", LatchWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    live "/", TraceHomeLive
   end
 
   scope "/v1/traces", LatchWeb do
