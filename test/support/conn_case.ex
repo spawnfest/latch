@@ -32,7 +32,7 @@ defmodule LatchWeb.ConnCase do
   end
 
   setup tags do
-    Latch.DataCase.setup_sandbox(tags)
+    # Latch.DataCase.setup_sandbox(tags)
     {:ok, conn: Phoenix.ConnTest.build_conn()}
   end
 end

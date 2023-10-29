@@ -9,7 +9,7 @@ defmodule Latch.Application do
   def start(_type, _args) do
     children = [
       LatchWeb.Telemetry,
-      Latch.Repo,
+      # Latch.Repo,
       {DNSCluster, query: Application.get_env(:latch, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: Latch.PubSub},
       # Start the Finch HTTP client for sending emails
