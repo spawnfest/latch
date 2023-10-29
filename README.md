@@ -1,12 +1,23 @@
 # Latch
 
-To start your Phoenix server:
+Latch allows viewing OpenTelemetry data as it is coming in, as well as a time-limited
+amount of recent data.
 
-  * Run `mix setup` to install and setup dependencies
-  * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+Many OpenTelemetry products are closed-source SaaS. This can be prohibitive for some
+due to cost or PII-data. Latch has no dependencies and receives OpenTelemetry data
+directly. This allows for easy setup. It can also be combined with an existing SaaS
+product, where PII-data is scrubbed from the SaaS data and retained for a short
+period in Latch.
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+![demo](./screencast.gif)
 
+## Getting traces
+Devel
+
+## Future work
+- Allow connecting to [Clickhouse](https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/exporter/clickhouseexporter/exporter_traces.go#L161-L198) to support loading historic traces
+- Improve ingestion performance
+- Allow filtering traces
 
 ## Development
 
