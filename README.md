@@ -12,7 +12,12 @@ period in Latch.
 ![demo](./screencast.gif)
 
 ## Getting traces
-Devel
+If you do not have any software that generates OpenTelemetry,
+the sample application inside `example-sender/` can be used.
+Please see the README there.
+
+Currently, Latch only accepts traces over HTTP in the otlp-proto format.
+
 
 ## Future work
 - Allow connecting to [Clickhouse](https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/exporter/clickhouseexporter/exporter_traces.go#L161-L198) to support loading historic traces
